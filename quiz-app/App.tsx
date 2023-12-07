@@ -1,6 +1,7 @@
 import React from 'react';
 import { Alert, SafeAreaView, StyleSheet, Text, Button, TouchableOpacity, View } from 'react-native';
 import { AntDesign } from '@expo/vector-icons'; 
+import { Ionicons } from '@expo/vector-icons';
 export default function App() {
 
   return (
@@ -15,8 +16,7 @@ export default function App() {
       <View style={styles.emptyBox}>
       </View>
         
-        <AntDesign name="arrowright" size={24} color="black" />
-        
+      <Ionicons name="person-circle" size={54} color="black" />        
        
         
         
@@ -40,6 +40,7 @@ export default function App() {
         Real exams
       </Text>
 
+      <TouchableOpacity>
       <View style={styles.realExams}>
         <View style={styles.examRow}>
           <View>
@@ -50,13 +51,14 @@ export default function App() {
         
       </View>
          
-         <TouchableOpacity style={styles.arrowIcon} ><AntDesign name="arrowright" size={24} color="black" /></TouchableOpacity>
+         <AntDesign name="arrowright" style={styles.arrowIcon} size={24} color="black" />
       
         </View>
 
       </View>
+      </TouchableOpacity>
         </View>
-        
+
     </View>
     </SafeAreaView>
   );
