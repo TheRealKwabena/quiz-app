@@ -50,12 +50,9 @@ export default function App() {
         
       </View>
          
-         <TouchableOpacity ></TouchableOpacity>
-          
-          
-       
+         <TouchableOpacity style={styles.arrowIcon} ><AntDesign name="arrowright" size={24} color="black" /></TouchableOpacity>
+      
         </View>
-        
 
       </View>
         </View>
@@ -95,7 +92,7 @@ const styles = StyleSheet.create({
     color: "#FF0000"
   },
   emptyBox: {
-    width: 150
+    width: 150,
   },
   emptyHBox: {
     width: '100%',
@@ -154,6 +151,10 @@ const styles = StyleSheet.create({
   },
   textStyleExaM: {
     fontSize: 14,
-    color: "#FFFFFF"
+    color: "#FFFFFF",
+  },
+  arrowIcon: {
+    marginTop: 'auto',
+    marginEnd: 'auto'
   }
 })
