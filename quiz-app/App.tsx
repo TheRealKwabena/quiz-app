@@ -1,25 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, Button, TouchableOpacity, View } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-
+import { Alert, SafeAreaView, StyleSheet, Text, Button, TouchableOpacity, View } from 'react-native';
+import { AntDesign } from '@expo/vector-icons'; 
 export default function App() {
+
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
+ <SafeAreaView>
+
         <View style={styles.entireColumn}>
         <View style={styles.topContainer}>
       <View>
         <Text style={styles.introText} >Hi, Welcome</Text>
-        
         <Text style={styles.introText1} >Great to see you again!</Text>
       </View>
       <View style={styles.emptyBox}>
-        
       </View>
         
-        <Ionicons name="person-circle" size ={50}  ></Ionicons>
+        <AntDesign name="arrowright" size={24} color="black" />
         
        
         
@@ -27,10 +23,19 @@ export default function App() {
      
       </View>
 
-      <View style={styles.emptyHBox}>
 
+      <View style={styles.joinBlock}>
+        <Text style={styles.wordInBlock}>You want to join for quizz?</Text>
+        <View style={styles.joinToQuizz}>
+        <Button
+        title="Press me"
+        onPress={() => Alert.prompt('Write code')}
+        color="black"
+      />
       </View>
-      
+
+
+      <View style={styles.emptyHBox}></View>
       <Text>
         Real exams
       </Text>
@@ -39,13 +44,13 @@ export default function App() {
         <View style={styles.examRow}>
           <View>
           <Text style={styles.textStyleExam}>Your available exams</Text>
-        <Text style={styles.textStyleExam2}>3 exams</Text>
+        <Text style={styles.textStyleExaM}>3 exams</Text>
           </View>
           <View style={styles.emptyBox1}>
         
       </View>
          
-         <TouchableOpacity ><Ionicons name="md-arrow-forward" size={32}></Ionicons></TouchableOpacity>
+         <TouchableOpacity ></TouchableOpacity>
           
           
        
@@ -57,7 +62,6 @@ export default function App() {
         
     </View>
     </SafeAreaView>
-    
   );
 }
 
@@ -66,25 +70,21 @@ const styles = StyleSheet.create({
     backgroundColor: "#FAF5EF",
     flexDirection:"column",
     height: '100%',
-    
-    
   },
   topContainer: {
-  
     flexDirection:'row',
     alignContent: "space-between",
     width: '100%',
     height: 60
   },
   entireColumn: {
-    marginTop: 20,
+    marginTo: 20,
     flexDirection:"column",
     marginLeft: 25,
     marginRight: 25,
   },
   introText: {
     fontSize: 25
-
   },
   introText1: {
     marginTop: 10,
@@ -117,22 +117,43 @@ const styles = StyleSheet.create({
     backgroundColor: "#509870",
     borderRadius: 20,
     marginTop: 10
-  
   }, 
   examRow: {
     flexDirection: "row",
     padding: 20,
     alignContent: 'space-between'
-
   },
   textStyleExam: {
     fontSize: 18,
     color: "#FFFFFF",
     fontWeight: '800'
-
   },
-  textStyleExam2: {
+  joinBlock: {
+    backgroundColor: "#DF8E52",
+    width: 338,
+    height: 100,
+    marginLeft: 'auto',
+    marginRight: "auto",
+    borderRadius: 20,
+    marginTop: 50,
+  },
+  wordInBlock: {
+    marginLeft: 'auto',
+    marginRight: "auto",
+    fontSize: 20,
+    color: "white",
+    marginTop: 10,
+  },
+  joinToQuizz: {
+    backgroundColor: "white",
+    width: '40%',
+    marginLeft: 'auto',
+    marginRight: "auto",
+    borderRadius: 20,
+    marginTop: 10,
+  },
+  textStyleExaM: {
     fontSize: 14,
     color: "#FFFFFF"
   }
-});
+})
