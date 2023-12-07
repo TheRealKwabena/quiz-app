@@ -12,7 +12,10 @@ export default function App() {
         <Text>
 dfvjd;lvjdvjdvjd;fjvdfvjklj
         </Text>
+
         <Text>Norbert</Text>
+
+        <Text>Jeric</Text>
       </View>
     </View>
   );
