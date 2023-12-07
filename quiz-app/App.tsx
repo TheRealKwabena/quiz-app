@@ -5,8 +5,8 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <View>
-        <Text style={styles.textl}>
+      <View style={styles.textl}>
+        <Text>
     ddfvdkfvdkvdfkv
         </Text>
         <Text>
@@ -19,9 +19,11 @@ dfvjd;lvjdvjdvjd;fjvdfvjklj
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
+
   },
   textl: {
-    marginTop: 100
+    marginTop: 100,
+    display: "flex",
+    flexDirection: "row"
   }
 });
