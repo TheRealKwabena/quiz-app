@@ -1,29 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
+import Home from './pages/Home';
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <View style={styles.textl}>
-        <Text>
-    ddfvdkfvdkvdfkv
-        </Text>
-        <Text>
-dfvjd;lvjdvjdvjd;fjvdfvjklj
-        </Text>
-      </View>
-    </View>
-  );
+    return <Home />
 }
-
-const styles = StyleSheet.create({
-  container: {
-
-  },
-  textl: {
-    marginTop: 100,
-    display: "flex",
-    flexDirection: "row"
-  }
-});
