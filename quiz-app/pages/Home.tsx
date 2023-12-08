@@ -1,42 +1,38 @@
 import React from 'react';
-import { Alert, SafeAreaView, StyleSheet, Text, Button, TouchableOpacity, View } from 'react-native';
+import { Alert, SafeAreaView, StyleSheet, Text, Button, TouchableOpacity, View, ScrollView } from 'react-native';
 import { AntDesign } from '@expo/vector-icons'; 
 import { Ionicons } from '@expo/vector-icons';
+import QuizCard from '../components/QuizCard';
 export default function Home() {
 
   return (
  <SafeAreaView>
-
-        <View style={styles.entireColumn}>
+   
+      <View style={styles.entireColumn}>
         <View style={styles.topContainer}>
-      <View>
-        <Text style={styles.introText} >Hi, Welcome</Text>
-        <Text style={styles.introText1} >Great to see you again!</Text>
-      </View>
-      <View style={styles.emptyBox}>
-      </View>
-        
-      <Ionicons name="person-circle" size={54} color="black" />        
-       
-        
-        
-     
+          <View>
+            <Text style={styles.introText} >Hi, Welcome</Text>
+            <Text style={styles.introText1} >Great to see you again!</Text>
+          </View>
+          <View style={styles.emptyBox}></View>
+        <Ionicons name="person-circle" size={54} color="black" />        
+      
       </View>
 
 
       <View style={styles.joinBlock}>
         <Text style={styles.wordInBlock}>You want to join for quizz?</Text>
         <View style={styles.joinToQuizz}>
-        <Button
+          <Button
         title="Press me"
         onPress={() => Alert.prompt('Write code')}
         color="black"
-      />
+        />
       </View>
 
 
       <View style={styles.emptyHBox}></View>
-      <Text>
+      <Text style={styles.sectionHeaders}>
         Real exams
       </Text>
 
@@ -57,6 +53,15 @@ export default function Home() {
 
       </View>
       </TouchableOpacity>
+      <View style={styles.quizCards}>
+        <Text style={styles.sectionHeaders}>Quizzes</Text>
+        
+        <QuizCard numberOfTests={3} subjectName='Math'/>
+      <QuizCard numberOfTests={6} subjectName='Reading'/>
+        
+     
+      </View>
+      
         </View>
 
     </View>
@@ -158,5 +163,47 @@ const styles = StyleSheet.create({
   arrowIcon: {
     marginTop: 'auto',
     marginEnd: 'auto'
+  },
+  quizCardContainer: {
+    backgroundColor: "#F6E6D0",
+    height: 60,
+    width: "100%",
+    flexDirection: "row",
+    alignItems: "center",
+    borderRadius: 20
+  },
+  testDescription: {
+    backgroundColor: "#FFFFFF",
+    height: 35,
+    width: 35,
+    flexDirection:"column",
+    alignItems:"center",
+    borderRadius: 8,
+
+
+    
+  },
+  rowContainer: {
+    margin: 20
+  },
+  textColor: {
+    color: "#FF0000",
+    fontSize: 12
+    
+  },
+  subjectName : {
+    fontSize: 20
+  },
+  iconContainer: {
+    alignContent: 'flex-end'
+  },
+  quizCards: {
+    marginTop: 50
+  }, 
+  sectionHeaders: {
+   color: "#432B07",
+   padding: 10,
+   fontSize: 15
   }
+  
 })
