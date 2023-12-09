@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import { AntDesign } from '@expo/vector-icons'; 
 
 type QuizCardProps = {
-    numberOfTests: number,
+    numberOfTests: number ,
     subjectName: string
 }
 const QuizCard = (props: QuizCardProps) => {
@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#F6E6D0",
     height: 60,
     width: "100%",
+    display: 'flex',
     flexDirection: "row",
     alignItems: "center",
     borderRadius: 20,
@@ -85,11 +86,12 @@ const styles = StyleSheet.create({
     fontSize: 20
   },
   iconContainer: {
-    alignContent: 'flex-end'
+    marginLeft: 'auto'
   },
   arrowIcon: {
     marginTop: 'auto',
-    marginEnd: 'auto'
+    marginEnd: 'auto',
+    padding: 10
   },
   emptyBox: {
     width: 180,
